@@ -37,7 +37,7 @@ namespace Travelway_Team3_API.Formatters
     }
     public static class JsonApiMediaTypes
     {
-        private static readonly MediaTypeHeaderValue DefaultApplicationVndApiJsonMediaType = new MediaTypeHeaderValue("application/vnd.api+json");
+        private static readonly MediaTypeHeaderValue DefaultApplicationVndApiJsonMediaType = new MediaTypeHeaderValue("application/json");
 
         /// <summary>
         /// Gets a <see cref="MediaTypeHeaderValue"/> instance representing <c>application/vnd.api+json</c>.

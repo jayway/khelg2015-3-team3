@@ -1,17 +1,85 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace Travelway_Team3_API.Controllers
 {
+    [RoutePrefix("api/sap")]
     public class SAPController : ApiController
     {
-        [Route("api/sap/trips"), HttpGet]
-        [Route("api/sap/travellers"), HttpGet]
-        [Route("api/sap/travellers"), HttpPut]
-        [Route("api/sap/travellers"), HttpPost]
+        /// <summary>
+        /// Get information about all trips
+        /// </summary>
+        /// <remarks>This is some longer text about the method.</remarks>
+        /// <returns>The information about everything</returns>
+        [Route("trips"), HttpGet]
+        [ResponseType(typeof(List<Trip>))]
+        public IHttpActionResult GetTrips()
+        {
+            return Ok(new List<Trip>());
+        }
+        [Route("travellers/{email}"), HttpGet]
+        [ResponseType(typeof(Traveller))]
+        public IHttpActionResult GetTraveller(string email)
+        {
+            return Ok(new Traveller());
+        }
+        [Route("travellers"), HttpPut]
+        [ResponseType(typeof(Traveller))]
+        public IHttpActionResult AddTraveller(Traveller travller)
+        {
+            return Created("foo", new Traveller());
+        }
+        [Route("travellers"), HttpPost]
+        [ResponseType(typeof(Traveller))]
+        public IHttpActionResult UpdateTravellerInfo(Traveller traveller, string email)
+        {
+            return Ok(new Traveller());
+        }
+    }
+
+    public class Traveller
+    {
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public string PassportNumber { get; set; }
+        public Gender Gender { get; set; }
+    }
+
+    public class Trip
+    {
+        /// <summary>
+        /// All events, travel plans, hotel bookings etc for the trip.
+        /// </summary>
+        public ICollection<Event> Events{ get; set; }
+        /// <summary>
+        /// Personal information about all participants.
+        /// </summary>
+        public ICollection<Traveller> Travellers { get; set; }
+    }
+
+    public class Event
+    {
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
+        public Location Location { get; set; }
+
+    }
+
+    public class Location
+    {
+        public string Name { get; set; }
+        public double Longitude { get; set; }
+        public double Latitude { get; set; }
+    }
+
+    public enum Gender
+    {
+        Unknown,
+        Male,
+        Female
     }
 }
