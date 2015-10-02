@@ -39,6 +39,19 @@ namespace Travelway_Team3_API.Controllers
             return Ok(new List<Event>());
         }
 
+        [Route("trips/{id}/events"), HttpPost]
+        [ResponseType(typeof(Event))]
+        public IHttpActionResult AddEvent(Event @event) {
+            return Created("foo", @event);
+        }
+
+        [Route("trips/{tripid}/events/{eventid}"), HttpPut]
+        [ResponseType(typeof(Event))]
+        public IHttpActionResult UpdateEvent(int tripid, int eventid, Event @event)
+        {
+            return Ok(@event);
+        }
+
         [Route("trips/{id}/travellers"), HttpGet]
         [ResponseType(typeof(List<Traveller>))]
         public IHttpActionResult GetTravellersForTrip(int tripid)
