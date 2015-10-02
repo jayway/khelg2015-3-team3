@@ -8,19 +8,37 @@
 
 import UIKit
 
-class EventCell: UITableViewCell {
-
-  @IBOutlet weak var eventIcon: UIImageView!
-  @IBOutlet weak var card: Card!
-  @IBOutlet weak var eventTitle: UILabel!
-  @IBOutlet weak var eventText: UILabel!
-  @IBAction func didPressJoin(sender: UIButton) {
+class EventIcon: UIImageView {
     
-  }
-  
-  
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var type: EventType = .Food {
+        didSet {
+            self.image = type.icon
+        }
     }
+    
+}
+
+class EventIconView: UIView {
+    
+    @IBOutlet weak var icon: EventIcon!
+    
+    var type: EventType = .Food {
+        didSet {
+            backgroundColor = type.color
+            icon.type = type
+        }
+    }
+    
+}
+
+class EventCell: UITableViewCell {
+    
+    @IBOutlet weak var card: Card!
+    @IBOutlet weak var eventIconView: EventIconView!
+    
+    func configureWithEvent(event: Event) {
+        card.event = event
+        eventIconView.type = event.type
+    }
+    
 }
