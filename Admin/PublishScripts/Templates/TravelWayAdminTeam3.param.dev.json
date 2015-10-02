@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "teamwayadmin-team3"
+  },
+  "hostingPlanName": {
+    "value": "Default1"
+  },
+  "siteLocation": {
+    "value": "West Europe"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "357f34f9-fdf5-4daf-afdb-10a32751d41b"
+  },
+  "resourceGroup": {
+    "value": "Default-Web-WestEurope"
+  }
+}

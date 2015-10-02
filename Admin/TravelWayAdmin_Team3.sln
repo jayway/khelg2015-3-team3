@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelWayAdmin_Team3", "TravelWayAdmin_Team3\TravelWayAdmin_Team3.csproj", "{14636C0C-4DD3-4186-8CC1-54DD5EEEE886}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{8642B379-C405-470B-B84D-8F006860D6C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{B97CE915-9487-4FEE-B2E5-7A69A5BAA8CD}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{3D9F9AEC-F8F2-4F82-B995-B2FB758CBCA4}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\TravelWayAdminTeam3.json = PublishScripts\Templates\TravelWayAdminTeam3.json
+		PublishScripts\Templates\TravelWayAdminTeam3.param.dev.json = PublishScripts\Templates\TravelWayAdminTeam3.param.dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14636C0C-4DD3-4186-8CC1-54DD5EEEE886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14636C0C-4DD3-4186-8CC1-54DD5EEEE886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14636C0C-4DD3-4186-8CC1-54DD5EEEE886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14636C0C-4DD3-4186-8CC1-54DD5EEEE886}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B97CE915-9487-4FEE-B2E5-7A69A5BAA8CD} = {8642B379-C405-470B-B84D-8F006860D6C9}
+		{3D9F9AEC-F8F2-4F82-B995-B2FB758CBCA4} = {8642B379-C405-470B-B84D-8F006860D6C9}
+	EndGlobalSection
+EndGlobal
