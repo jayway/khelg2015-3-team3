@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35BEB9621BBECC0C00544323 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEB9611BBECC0C00544323 /* BorderedButton.swift */; settings = {ASSET_TAGS = (); }; };
 		4886716C1BBE8AB900885889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4886716B1BBE8AB900885889 /* AppDelegate.swift */; };
 		4886716E1BBE8AB900885889 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4886716D1BBE8AB900885889 /* FeedViewController.swift */; };
 		488671701BBE8AB900885889 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4886716F1BBE8AB900885889 /* UsersViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35BEB9611BBECC0C00544323 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		488671681BBE8AB900885889 /* TravelWayThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelWayThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4886716B1BBE8AB900885889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4886716D1BBE8AB900885889 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				488671711BBE8AB900885889 /* Main.storyboard */,
 				488671741BBE8AB900885889 /* Assets.xcassets */,
 				488671761BBE8AB900885889 /* LaunchScreen.storyboard */,
+				35BEB9611BBECC0C00544323 /* BorderedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				4886718A1BBEB64900885889 /* TravelTabBar.swift in Sources */,
 				4886716E1BBE8AB900885889 /* FeedViewController.swift in Sources */,
 				488671861BBEB1DB00885889 /* EventsViewController.swift in Sources */,
+				35BEB9621BBECC0C00544323 /* BorderedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +333,7 @@
 				4886717E1BBE8AB900885889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

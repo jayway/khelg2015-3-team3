@@ -36,7 +36,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nr1-0c-l72" id="gD4-YW-EtJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ghr-fB-HO6">
@@ -142,7 +142,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gLt-dr-awA" id="Tnb-bh-ljg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="FTy-cO-DaL">
