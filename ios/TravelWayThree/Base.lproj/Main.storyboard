@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +28,7 @@
                                             <constraint firstAttribute="height" constant="200" id="LJo-o9-bmZ"/>
                                         </constraints>
                                     </mapView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NRc-3y-lX3">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NRc-3y-lX3">
                                         <rect key="frame" x="0.0" y="200" width="375" height="398"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,42 +37,79 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nr1-0c-l72" id="gD4-YW-EtJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ghr-fB-HO6">
-                                                            <rect key="frame" x="8" y="23" width="44" height="44"/>
+                                                            <rect key="frame" x="8" y="30" width="30" height="30"/>
                                                             <animations/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="44" id="9Go-vo-JNK"/>
-                                                                <constraint firstAttribute="width" constant="44" id="RGA-UA-3LM"/>
+                                                                <constraint firstAttribute="width" constant="30" id="RGA-UA-3LM"/>
+                                                                <constraint firstAttribute="width" secondItem="ghr-fB-HO6" secondAttribute="height" multiplier="1:1" id="jPJ-DF-51Q"/>
                                                             </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="9Go-vo-JNK"/>
+                                                                </mask>
+                                                            </variation>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv3-66-9jz">
-                                                            <rect key="frame" x="60" y="8" width="269" height="73"/>
+                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxa-mn-pgU" customClass="Card" customModule="TravelWayThree" customModuleProvider="target">
+                                                            <rect key="frame" x="48" y="5" width="317" height="79"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxw-Hd-UQf" customClass="BorderedButton" customModule="TravelWayThree" customModuleProvider="target">
+                                                                    <rect key="frame" x="266" y="44" width="46" height="30"/>
+                                                                    <animations/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <state key="normal" title="Join"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc7-bW-BQj">
+                                                                    <rect key="frame" x="8" y="8" width="253" height="66"/>
+                                                                    <animations/>
+                                                                    <string key="text">Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
                                                             <animations/>
-                                                            <string key="text">Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tka-VJ-W4L">
-                                                            <rect key="frame" x="337" y="51" width="30" height="30"/>
-                                                            <animations/>
-                                                            <state key="normal" title="Join"/>
-                                                        </button>
+                                                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="Dc7-bW-BQj" firstAttribute="top" secondItem="lxa-mn-pgU" secondAttribute="top" constant="8" id="D0o-za-Bt8"/>
+                                                                <constraint firstAttribute="trailing" secondItem="bxw-Hd-UQf" secondAttribute="trailing" constant="5" id="PqT-a7-cxP"/>
+                                                                <constraint firstItem="Dc7-bW-BQj" firstAttribute="leading" secondItem="lxa-mn-pgU" secondAttribute="leading" constant="8" id="TVG-cH-UoF"/>
+                                                                <constraint firstItem="bxw-Hd-UQf" firstAttribute="leading" secondItem="Dc7-bW-BQj" secondAttribute="trailing" constant="5" id="cps-Fg-XWx"/>
+                                                                <constraint firstAttribute="bottom" secondItem="bxw-Hd-UQf" secondAttribute="bottom" constant="5" id="f2d-E8-jcG"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Dc7-bW-BQj" secondAttribute="bottom" constant="5" id="gIM-ud-oGF"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                    <size key="value" width="0.0" height="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                     </subviews>
                                                     <animations/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="ghr-fB-HO6" firstAttribute="centerY" secondItem="gD4-YW-EtJ" secondAttribute="centerY" id="16K-dO-bLy"/>
                                                         <constraint firstItem="ghr-fB-HO6" firstAttribute="leading" secondItem="gD4-YW-EtJ" secondAttribute="leadingMargin" id="4JY-6F-W4U"/>
-                                                        <constraint firstItem="Wv3-66-9jz" firstAttribute="top" secondItem="gD4-YW-EtJ" secondAttribute="topMargin" id="BFv-Dr-oxR"/>
-                                                        <constraint firstItem="Tka-VJ-W4L" firstAttribute="bottom" secondItem="gD4-YW-EtJ" secondAttribute="bottomMargin" id="J4J-1o-w6v"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="Wv3-66-9jz" secondAttribute="bottom" id="Jbv-8N-wwd"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lxa-mn-pgU" secondAttribute="bottom" constant="5" id="MVx-4S-MSA"/>
                                                         <constraint firstItem="ghr-fB-HO6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gD4-YW-EtJ" secondAttribute="topMargin" id="NLc-bT-oHZ"/>
-                                                        <constraint firstItem="Tka-VJ-W4L" firstAttribute="leading" secondItem="Wv3-66-9jz" secondAttribute="trailing" constant="8" id="jCe-hf-kax"/>
-                                                        <constraint firstItem="Wv3-66-9jz" firstAttribute="leading" secondItem="ghr-fB-HO6" secondAttribute="trailing" constant="8" id="keL-yE-IiU"/>
-                                                        <constraint firstItem="Tka-VJ-W4L" firstAttribute="trailing" secondItem="gD4-YW-EtJ" secondAttribute="trailingMargin" id="oIK-LT-y7A"/>
+                                                        <constraint firstItem="lxa-mn-pgU" firstAttribute="top" secondItem="gD4-YW-EtJ" secondAttribute="top" constant="5" id="cnH-z8-c55"/>
+                                                        <constraint firstItem="lxa-mn-pgU" firstAttribute="leading" secondItem="ghr-fB-HO6" secondAttribute="trailing" constant="10" id="fAe-g2-PUt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lxa-mn-pgU" secondAttribute="trailing" constant="10" id="nD8-EB-hVa"/>
                                                         <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ghr-fB-HO6" secondAttribute="bottom" id="zsl-yL-xsg"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
@@ -142,7 +180,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gLt-dr-awA" id="Tnb-bh-ljg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="FTy-cO-DaL">
@@ -158,7 +196,7 @@
                                                     <animations/>
                                                     <string key="text">Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZq-hz-pbS">
