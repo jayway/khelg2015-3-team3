@@ -5,7 +5,9 @@ namespace Travelway_Team3_API.Models
     public class TripAppModel
     {
         private static TripAppModel _modelInstance;
-        private TripAppModel() { }
+        private TripAppModel() {
+            Users = new List<User>();
+        }
         public static TripAppModel Instance => _modelInstance ?? (_modelInstance = new TripAppModel());
 
         public ICollection<User> Users { get; private set; }

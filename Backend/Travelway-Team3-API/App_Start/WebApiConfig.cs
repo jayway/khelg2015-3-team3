@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Travelway_Team3_API.Formatters;
 
 namespace Travelway_Team3_API
 {
@@ -19,6 +20,8 @@ namespace Travelway_Team3_API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Formatters.Clear();
+            config.Formatters.Add(new JsonApiMediaTypeFormatter());
         }
     }
 }
