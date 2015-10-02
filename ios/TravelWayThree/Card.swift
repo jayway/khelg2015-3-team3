@@ -23,6 +23,7 @@ class Card: UIView {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var joinedView: UIView!
+    @IBOutlet weak var joinedUsersView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
