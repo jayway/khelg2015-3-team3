@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35BEB9621BBECC0C00544323 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEB9611BBECC0C00544323 /* BorderedButton.swift */; settings = {ASSET_TAGS = (); }; };
+		35BEB9841BBEE13000544323 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEB9831BBEE13000544323 /* Event.swift */; settings = {ASSET_TAGS = (); }; };
 		4872E0FB1BBED3770026E3AB /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872E0FA1BBED3770026E3AB /* EventCell.swift */; settings = {ASSET_TAGS = (); }; };
 		4872E0FF1BBEE56C0026E3AB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872E0FE1BBEE56C0026E3AB /* AvatarView.swift */; settings = {ASSET_TAGS = (); }; };
 		4886716C1BBE8AB900885889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4886716B1BBE8AB900885889 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		35BEB9611BBECC0C00544323 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		35BEB9831BBEE13000544323 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		4872E0FA1BBED3770026E3AB /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		4872E0FE1BBEE56C0026E3AB /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		488671681BBE8AB900885889 /* TravelWayThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelWayThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				4886716D1BBE8AB900885889 /* FeedViewController.swift */,
 				4886716F1BBE8AB900885889 /* UsersViewController.swift */,
 				488671851BBEB1DB00885889 /* EventsViewController.swift */,
+				35BEB9831BBEE13000544323 /* Event.swift */,
 			);
 			path = TravelWayThree;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				488671841BBEAB7700885889 /* UIColor+Travel.m in Sources */,
 				4872E0FF1BBEE56C0026E3AB /* AvatarView.swift in Sources */,
 				4886716C1BBE8AB900885889 /* AppDelegate.swift in Sources */,
+				35BEB9841BBEE13000544323 /* Event.swift in Sources */,
 				4886718A1BBEB64900885889 /* TravelTabBar.swift in Sources */,
 				4886716E1BBE8AB900885889 /* FeedViewController.swift in Sources */,
 				488671861BBEB1DB00885889 /* EventsViewController.swift in Sources */,
