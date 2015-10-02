@@ -26,6 +26,13 @@ namespace Travelway_Team3_API.Controllers
             return Ok(new Trip());
         }
 
+        [Route("trips/{id}/events"), HttpGet]
+        [ResponseType(typeof(IList<Event>))]
+        public IHttpActionResult GetEventsForTrip(int id)
+        {
+            return Ok(new List<Event>());
+        }
+
         [Route("trips/{id}/travellers"), HttpGet]
         [ResponseType(typeof(List<Traveller>))]
         public IHttpActionResult GetTravellersForTrip(int tripid)
