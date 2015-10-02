@@ -17,8 +17,22 @@ namespace Travelway_Team3_API.Controllers
         [ResponseType(typeof(List<Trip>))]
         public IHttpActionResult GetTrips()
         {
-            return Ok(new List<Trip>());
+            return Ok(new List<TripSummary>());
         }
+        [Route("trips/{id}"), HttpGet]
+        [ResponseType(typeof(Trip))]
+        public IHttpActionResult GetTrip(int id)
+        {
+            return Ok(new Trip());
+        }
+
+        [Route("trips/{id}/travellers"), HttpGet]
+        [ResponseType(typeof(List<Traveller>))]
+        public IHttpActionResult GetTravellersForTrip(int tripid)
+        {
+            return Ok(new List<Traveller>());
+        }
+
         [Route("travellers/{email}"), HttpGet]
         [ResponseType(typeof(Traveller))]
         public IHttpActionResult GetTraveller(string email)
@@ -47,6 +61,13 @@ namespace Travelway_Team3_API.Controllers
         public string Title { get; set; }
         public string PassportNumber { get; set; }
         public Gender Gender { get; set; }
+    }
+
+    public class TripSummary
+    {
+        public int Id { get; set;}
+        public string Company { get; set; }
+        public string Name { get; set; }
     }
 
     public class Trip
