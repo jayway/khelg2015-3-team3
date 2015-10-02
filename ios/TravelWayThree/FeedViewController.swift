@@ -26,7 +26,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
   
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    return eventsTable.dequeueReusableCellWithIdentifier(CellIdentifiers.Event.rawValue)!
+    if let event = eventsTable.dequeueReusableCellWithIdentifier(CellIdentifiers.Event.rawValue) as? EventCell {
+      event.card.backgroundColor = UIColor.TravelGreenLight()
+      return event;
+    }
+    
+    return UITableViewCell()
   }
 
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -33,7 +33,7 @@
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fakeEvent" rowHeight="90" id="nr1-0c-l72" userLabel="Event 1">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fakeEvent" rowHeight="90" id="nr1-0c-l72" userLabel="Event 1" customClass="EventCell" customModule="TravelWayThree" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nr1-0c-l72" id="gD4-YW-EtJ">
@@ -67,6 +67,9 @@
                                                                             <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="didPressJoin:" destination="nr1-0c-l72" eventType="touchUpInside" id="Y6T-lE-JX1"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc7-bW-BQj">
                                                                     <rect key="frame" x="8" y="30" width="259" height="45"/>
@@ -123,6 +126,13 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="card" destination="lxa-mn-pgU" id="bFK-ab-v8k"/>
+                                                    <outlet property="eventIcon" destination="ghr-fB-HO6" id="Xpc-38-wZ0"/>
+                                                    <outlet property="eventText" destination="Dc7-bW-BQj" id="SLA-te-0C3"/>
+                                                    <outlet property="eventTitle" destination="mK2-kr-pLI" id="tnY-ru-9hh"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
