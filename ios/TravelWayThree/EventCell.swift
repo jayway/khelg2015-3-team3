@@ -8,40 +8,37 @@
 
 import UIKit
 
-class EventIconView: UIView {
-    
-    @IBOutlet weak var icon: UIImageView!
+class EventIcon: UIImageView {
     
     var type: EventType = .Food {
         didSet {
-            self.backgroundColor = type.color
-            
+            self.image = type.icon
         }
     }
     
-    override func awakeFromNib() {
-        
+}
+
+class EventIconView: UIView {
+    
+    @IBOutlet weak var icon: EventIcon!
+    
+    var type: EventType = .Food {
+        didSet {
+            backgroundColor = type.color
+            icon.type = type
+        }
     }
     
 }
 
 class EventCell: UITableViewCell {
     
-    @IBOutlet weak var eventIcon: UIImageView!
     @IBOutlet weak var card: Card!
-    @IBOutlet weak var eventTitle: UILabel!
-    @IBOutlet weak var eventText: UILabel!
-    @IBAction func didPressJoin(sender: UIButton) {
-        
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var eventIconView: EventIconView!
     
     func configureWithEvent(event: Event) {
-        card.backgroundColor = event.color
-        
+        card.event = event
+        eventIconView.type = event.type
     }
+    
 }

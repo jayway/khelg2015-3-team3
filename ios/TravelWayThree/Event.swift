@@ -68,11 +68,29 @@ enum EventType {
             return UIColor.workEventColor()
         }
     }
+    
+    var icon: UIImage {
+        switch self {
+        case .Food:
+            return UIImage(named: "FoodEvent.png")!
+        case .Social:
+            return UIImage(named: "SocialEvent.png")!
+        case .Culture:
+            return UIImage(named: "CultureEvent.png")!
+        case .Leisure:
+            return UIImage(named: "LeisureEvent.png")!
+        case .Transport:
+            return UIImage(named: "TransportEvent.png")!
+        case .Work:
+            return UIImage(named: "WorkEvent.png")!
+        }
+    }
 }
 
 class Event {
     
     var title: String
+    var description: String
     var type: EventType
     var distance: CLLocationDistance
     var date: NSDate
@@ -83,8 +101,9 @@ class Event {
         return type.color
     }
     
-    init(title: String, type: EventType, distance: CLLocationDistance, date: NSDate, duration: NSTimeInterval) {
+    init(title: String, description: String, type: EventType, distance: CLLocationDistance, date: NSDate, duration: NSTimeInterval) {
         self.title = title
+        self.description = description
         self.type = type
         self.distance = distance
         self.date = date
