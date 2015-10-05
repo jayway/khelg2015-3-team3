@@ -29,12 +29,21 @@ class EventIconView: UIView {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = self.frame.width / 2
+    }
+    
 }
+
+let EventCellIdentifier = "EventCellIdentifier"
 
 class EventCell: UITableViewCell {
     
     @IBOutlet weak var card: Card!
     @IBOutlet weak var eventIconView: EventIconView!
+    
+    var identifier: String = EventCellIdentifier
     
     func configureWithEvent(event: Event) {
         card.event = event

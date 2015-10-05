@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3558A0151BBFB7BB00B7BAAA /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3558A0141BBFB7BB00B7BAAA /* CreateEventViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3558A0171BBFCBF500B7BAAA /* CreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3558A0161BBFCBF500B7BAAA /* CreateEvent.swift */; settings = {ASSET_TAGS = (); }; };
+		3558A0191BBFD08A00B7BAAA /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3558A0181BBFD08A00B7BAAA /* ShowViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		35BEB9621BBECC0C00544323 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEB9611BBECC0C00544323 /* BorderedButton.swift */; settings = {ASSET_TAGS = (); }; };
 		35BEB9841BBEE13000544323 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEB9831BBEE13000544323 /* Event.swift */; settings = {ASSET_TAGS = (); }; };
 		35BEB9861BBEEDDB00544323 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEB9851BBEEDDB00544323 /* LocationService.swift */; settings = {ASSET_TAGS = (); }; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3558A0141BBFB7BB00B7BAAA /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		3558A0161BBFCBF500B7BAAA /* CreateEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEvent.swift; sourceTree = "<group>"; };
+		3558A0181BBFD08A00B7BAAA /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		35BEB9611BBECC0C00544323 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		35BEB9831BBEE13000544323 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		35BEB9851BBEEDDB00544323 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 				488671851BBEB1DB00885889 /* EventsViewController.swift */,
 				35BEB9831BBEE13000544323 /* Event.swift */,
 				35BEB9851BBEEDDB00544323 /* LocationService.swift */,
+				3558A0141BBFB7BB00B7BAAA /* CreateEventViewController.swift */,
+				3558A0161BBFCBF500B7BAAA /* CreateEvent.swift */,
+				3558A0181BBFD08A00B7BAAA /* ShowViewController.swift */,
 			);
 			path = TravelWayThree;
 			sourceTree = "<group>";
@@ -150,6 +159,7 @@
 				TargetAttributes = {
 					488671671BBE8AB900885889 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 7XT7RQW894;
 					};
 				};
 			};
@@ -191,10 +201,13 @@
 			files = (
 				488671701BBE8AB900885889 /* UsersViewController.swift in Sources */,
 				4872E0FB1BBED3770026E3AB /* EventCell.swift in Sources */,
+				3558A0171BBFCBF500B7BAAA /* CreateEvent.swift in Sources */,
 				488671841BBEAB7700885889 /* UIColor+Travel.m in Sources */,
 				4872E0FF1BBEE56C0026E3AB /* AvatarView.swift in Sources */,
+				3558A0191BBFD08A00B7BAAA /* ShowViewController.swift in Sources */,
 				4886716C1BBE8AB900885889 /* AppDelegate.swift in Sources */,
 				35BEB9841BBEE13000544323 /* Event.swift in Sources */,
+				3558A0151BBFB7BB00B7BAAA /* CreateEventViewController.swift in Sources */,
 				4886718A1BBEB64900885889 /* TravelTabBar.swift in Sources */,
 				4886716E1BBE8AB900885889 /* FeedViewController.swift in Sources */,
 				488671861BBEB1DB00885889 /* EventsViewController.swift in Sources */,
@@ -312,10 +325,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TravelWayThree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Nilklint.TravelWayThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TravelWayThree/TravelWayThree-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -326,10 +342,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TravelWayThree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Nilklint.TravelWayThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TravelWayThree/TravelWayThree-Bridging-Header.h";
 			};
 			name = Release;
